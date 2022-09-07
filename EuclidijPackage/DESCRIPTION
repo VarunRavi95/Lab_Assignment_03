@@ -1,6 +1,6 @@
 Package: EuclidijPackage
 Type: Package
-Title: What the package does (short line)
+Title: It is a package which contains the Euclidean and Dijkstra algorithms.
 Version: 1.0
 Date: 2022-09-07
 Author: Who wrote it
