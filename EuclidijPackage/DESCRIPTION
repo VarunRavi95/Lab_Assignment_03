@@ -1,13 +1,15 @@
 Package: EuclidijPackage
 Type: Package
-Title: It Is A Package Which Contains The Euclidean And Dijkstra Algorithms
+Title: Computes Values For The Euclidean And Dijkstra Algorithms
 Version: 1.0
 Date: 2022-09-07
 Author: c(
     person('Varun', 'Ravi', email = 'varsi146@student.liu.se', role = 'aut')
     person('Aswath', 'Gopinath', email = 'aswma317@student.liu.se', role = 'aut')
 Maintainer: Varun Ravi <varsi146@student.liu.se>
-Description: Computes the greatest common divisior for two given numbers(integers) in an efficient method.
+Description: Aids in computing the greatest common divisor in an efficient methodology
+    by implementing the Euclidian algorithm. Furthermore, it also helps in computing
+    the shortest path between two nodes by implementing the Dijkstra algorithm.
 License: GPL-3
 RoxygenNote: 7.2.1
 Encoding: UTF-8
