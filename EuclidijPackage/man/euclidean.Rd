@@ -15,5 +15,5 @@ euclidean(x, y)
 This code returns the greatest common divisor
 }
 \description{
-Computes The Greatest Common Divisor Of Two Numbers(Integers).
+Computes the greatest common divisor for two given numbers(integers) in an efficient method.
 }
