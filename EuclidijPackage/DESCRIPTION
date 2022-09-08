@@ -1,10 +1,14 @@
 Package: EuclidijPackage
 Type: Package
-Title: It is a package which contains the Euclidean and Dijkstra algorithms.
+Title: It Is A Package Which Contains The Euclidean And Dijkstra Algorithms
 Version: 1.0
 Date: 2022-09-07
-Authors@R: c(
-    person('Varun', 'Ravi', email = 'varsi146@student.liu.se', role = c('aut', 'cre')
-    person('Aswath', 'Gopinath', email = 'aswma317@student.liu.se', role = c('aut', 'cre'))))
+Author: c(
+    person('Varun', 'Ravi', email = 'varsi146@student.liu.se', role = 'aut')
+    person('Aswath', 'Gopinath', email = 'aswma317@student.liu.se', role = 'aut')
+Maintainer: Varun Ravi <varsi146@student.liu.se>
 Description: Computes the greatest common divisior for two given numbers(integers) in an efficient method.
 License: GPL-3
+RoxygenNote: 7.2.1
+Encoding: UTF-8
+
