@@ -1,7 +1,7 @@
 Package: EuclidijPackage
 Type: Package
 Title: Computes Values For The Euclidean And Dijkstra Algorithms
-Version: 1.0
+Version: 4.2.1
 Date: 2022-09-07
 Author: c(
     person('Varun', 'Ravi', email = 'varsi146@student.liu.se', role = 'aut')
