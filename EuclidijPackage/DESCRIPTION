@@ -3,7 +3,8 @@ Type: Package
 Title: It is a package which contains the Euclidean and Dijkstra algorithms.
 Version: 1.0
 Date: 2022-09-07
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R: c(
+    person('Varun', 'Ravi', email = 'varsi146@student.liu.se', role = c('aut', 'cre')
+    person('Aswath', 'Gopinath', email = 'aswma317@student.liu.se', role = c('aut', 'cre'))))
+Description: Computes the greatest common divisior for two given numbers(integers) in an efficient method.
+License: GPL-3
