@@ -1,3 +1,11 @@
+#' @title Computes The Shortest Path Between Two Given Nodes
+#' @description It is an algorithm for finding the shortest paths between nodes in a graph.
+#' @param graph Parameter 1
+#' @param init_node Parameter 2
+#'
+#' @return Returns the distance between two given nodes.
+#' @export
+#'
 dijkstra <- function(graph, init_node){
   #Get the final_mat with the distance from first node
   all_nodes <- unique(graph[,1])
@@ -7,7 +15,7 @@ dijkstra <- function(graph, init_node){
   final_mat[final_mat[,"node"] == init_node,"distance"] = 0
   visited_vect <- c(init_node)
   final_mat <- get_distance(init_node, final_mat, visited_vect,0)
-  
+
   #Loop through each entry in the final_mat
   for (i in 1:nrow(final_mat)) {
     #Sort final_mat based on distance
@@ -32,7 +40,7 @@ get_distance <- function(node, df, visited_vect, node_dist){
     v2 <- wiki_graph[i,"v2"]
     weight <- wiki_graph[i,"w"]
     neigh_dist <- df[df[,"node"] == wiki_graph[i,"v2"],"distance"]
-    
+
     #For the node, if the entries are found in graph &
     #if the node is not available in the visited_vect &
     #if the distance(node) + weight to neighbor < the distance(neighbor),
@@ -41,7 +49,7 @@ get_distance <- function(node, df, visited_vect, node_dist){
        && (is.na(neigh_dist) ||
          ((node_dist + weight) < neigh_dist))
        ){
-      df[df[,"node"] == wiki_graph[i,"v2"],"distance"] = 
+      df[df[,"node"] == wiki_graph[i,"v2"],"distance"] =
         (node_dist + weight)
     }
   }
