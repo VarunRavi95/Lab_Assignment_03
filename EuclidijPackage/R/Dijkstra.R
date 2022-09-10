@@ -14,8 +14,8 @@ dijkstra <- function(graph, init_node){
   final_mat[, "node"] <- all_nodes
   final_mat[final_mat[,"node"] == init_node,"distance"] = 0
   visited_vect <- c(init_node)
-  final_mat <- get_distance(init_node, final_mat, visited_vect,0)
-
+  final_mat <- get_distance(graph, init_node, final_mat, visited_vect,0)
+  
   #Loop through each entry in the final_mat
   for (i in 1:nrow(final_mat)) {
     #Sort final_mat based on distance
@@ -23,7 +23,7 @@ dijkstra <- function(graph, init_node){
     #If the node is not in the visited_vect, then continue
     if (!final_mat[i,"node"] %in% visited_vect) {
       #Get the distance to the neighboring nodes and update final_mat
-      final_mat <- get_distance(final_mat[i,"node"],
+      final_mat <- get_distance(graph,final_mat[i,"node"],
                                 final_mat, visited_vect,
                                 final_mat[i,"distance"])
       #Update visited_vect
@@ -33,23 +33,23 @@ dijkstra <- function(graph, init_node){
   final_mat <- final_mat[order(final_mat[,"node"]),]
   return(final_mat[,"distance"])
 }
-get_distance <- function(node, df, visited_vect, node_dist){
+get_distance <- function(graph, node, df, visited_vect, node_dist){
   #Loop through the graph
-  for (i in 1:nrow(wiki_graph)) {
-    v1 <- wiki_graph[i,"v1"]
-    v2 <- wiki_graph[i,"v2"]
-    weight <- wiki_graph[i,"w"]
-    neigh_dist <- df[df[,"node"] == wiki_graph[i,"v2"],"distance"]
-
+  for (i in 1:nrow(graph)) {
+    v1 <- graph[i,"v1"]
+    v2 <- graph[i,"v2"]
+    weight <- graph[i,"w"]
+    neigh_dist <- df[df[,"node"] == graph[i,"v2"],"distance"]
+    
     #For the node, if the entries are found in graph &
     #if the node is not available in the visited_vect &
     #if the distance(node) + weight to neighbor < the distance(neighbor),
     #then update the distance(neighbor)
     if(v1 == node && (!v2 %in% visited_vect)
        && (is.na(neigh_dist) ||
-         ((node_dist + weight) < neigh_dist))
-       ){
-      df[df[,"node"] == wiki_graph[i,"v2"],"distance"] =
+           ((node_dist + weight) < neigh_dist))
+    ){
+      df[df[,"node"] == graph[i,"v2"],"distance"] =
         (node_dist + weight)
     }
   }
