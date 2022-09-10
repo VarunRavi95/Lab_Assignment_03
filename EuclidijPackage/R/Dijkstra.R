@@ -7,8 +7,19 @@
 #' @export
 #'
 dijkstra <- function(graph, init_node){
-  #Get the final_mat with the distance from first node
+  #Check if 3 columns are available in graph
+  df_colnames <- names(graph)
+  if(length(df_colnames) != 3) stop("Graph needs to have 3 columns")
+  
+  #Check if the names in the graph data frame is correct
+  if(df_colnames[1] != "v1" || df_colnames[2] != "v2" || 
+     df_colnames[3] != "w") stop("Invalid column names")
+  
+  #Check if init_node is part of the nodes in graph
   all_nodes <- unique(graph[,1])
+  if(!(init_node %in% all_nodes)) stop("Wrong init_node")
+  
+  #Get the final_mat with the distance from first node
   final_mat <- matrix(NA, nrow = length(all_nodes), ncol = 2)
   colnames(final_mat) <- c("node", "distance")
   final_mat[, "node"] <- all_nodes
@@ -59,4 +70,4 @@ get_distance <- function(graph, node, df, visited_vect, node_dist){
 #   data.frame(v1=c(1,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,6),
 #              v2=c(2,3,6,1,3,4,1,2,4,6,2,3,5,4,6,1,3,5),
 #              w=c(7,9,14,7,10,15,9,10,11,2,15,11,6,6,9,14,2,9))
-# dijkstra(wiki_graph, 3)
+# dijkstra(wiki_graph, 1)

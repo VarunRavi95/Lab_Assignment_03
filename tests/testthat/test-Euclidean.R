@@ -1,3 +1,14 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+context("euclidean")
+
+test_that("GDC is calculated correctly.", {
+  expect_equal(euclidean(123612, 13892347912), 4)
+  expect_equal(euclidean(100, 1000), 100)
+  expect_equal(euclidean(-100, 1000), 100)
+})
+
+
+test_that("Wrong input throws an error.", {
+  expect_error(euclidean("100", 1000))  
+  expect_error(euclidean(100, "1000"))
+  expect_error(euclidean(TRUE, "1000"))  
 })
