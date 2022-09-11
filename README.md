@@ -4,6 +4,7 @@
 # Lab_Assignment_03
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/VarunRavi95/Lab_Assignment_03/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/VarunRavi95/Lab_Assignment_03/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of Lab_Assignment_03 is to …
