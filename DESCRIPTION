@@ -10,9 +10,12 @@ Maintainer: Varun Ravi <varsi146@student.liu.se>
 Description: Aids in computing the greatest common divisor in an efficient methodology
     by implementing the Euclidian algorithm. Furthermore, it also helps in computing
     the shortest path between two nodes by implementing the Dijkstra algorithm.
-License: GPL-3
+License: GPL-3 + file LICENSE
 RoxygenNote: 7.2.1
 Encoding: UTF-8
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Depends: 
+    R (>= 2.10)
+LazyData: true
