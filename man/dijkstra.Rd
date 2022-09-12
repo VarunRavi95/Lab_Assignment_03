@@ -3,6 +3,9 @@
 \name{dijkstra}
 \alias{dijkstra}
 \title{Computes The Shortest Path Between Two Given Nodes}
+\source{
+\url{https://en.wikipedia.org/wiki/Dijkstra's_algorithm/}
+}
 \usage{
 dijkstra(graph, init_node)
 }

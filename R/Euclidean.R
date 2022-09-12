@@ -5,6 +5,7 @@
 #' @param y One of the integers of the two required to calculate the GCD
 #'
 #' @return This code returns the greatest common divisor
+#' @source \url{https://en.wikipedia.org/wiki/Euclidean_algorithm}
 #' @export
 #'
 

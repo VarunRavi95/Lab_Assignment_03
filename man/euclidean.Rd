@@ -3,6 +3,9 @@
 \name{euclidean}
 \alias{euclidean}
 \title{Computes The Greatest Common Divisor Of Two Numbers(Integers).}
+\source{
+\url{https://en.wikipedia.org/wiki/Euclidean_algorithm}
+}
 \usage{
 euclidean(x, y)
 }
